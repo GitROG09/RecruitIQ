@@ -64,31 +64,11 @@ RecruitIQ follows a modular AI pipeline consisting of:
 
 # 🔄 End-to-End Workflow
 
-```
-Job Description
-        │
-        ▼
-JD Intelligence Engine
-        │
-        ▼
-Candidate Feature Engineering
-        │
-        ▼
-Hybrid AI Matching
-        │
-        ▼
-Semantic Intelligence
-        │
-        ▼
-Weighted Score Aggregation
-        │
-        ▼
-Explainable AI
-        │
-        ▼
-Interactive Dashboard
-```
+<p align="center">
 
+<img src="assets/workflow.png" width="900">
+
+</p>
 ---
 
 # 🧠 Hybrid AI Ranking Engine
