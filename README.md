@@ -132,8 +132,11 @@ This enables recruiters to understand **why** a candidate has been recommended r
 
 <p align="center">
 
-<img src="assets/dashboard.png" width="1000">
-
+<img src="assets/dashboard1.png" width="1000">
+<img src="assets/dashboard2.png" width="1000">
+<img src="assets/dashboard3.png" width="1000">
+<img src="assets/dashboard4.png" width="1000">
+<img src="assets/dashboard5.png" width="1000">
 </p>
 
 The Streamlit dashboard includes:
