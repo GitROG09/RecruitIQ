@@ -1,0 +1,22 @@
+# --- Core app ---
+streamlit==1.42.0
+pandas==2.2.3
+numpy==2.2.6
+plotly==5.24.1
+
+# --- Semantic matching (Sentence-Transformers) ---
+# CPU-only torch wheel: cuts install size from ~2GB+ to ~200MB and avoids
+# pulling nvidia-*-cu12 CUDA packages that are useless on Streamlit Cloud
+# (no GPU) and frequently cause build timeouts / OOM on the free tier.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.8.0
+transformers==4.56.1
+sentence-transformers==5.1.1
+
+# NOTE: scikit-learn, scipy, huggingface-hub, Pillow etc. are pulled in
+# automatically as transitive deps of sentence-transformers — no need to
+# pin them separately.
+#
+# Removed (were never imported anywhere in src/): RapidFuzz, python-dotenv,
+# scikit-learn (explicit pin). Keeping unused heavy deps around only slows
+# down every CI/CD build and increases the deploy image size for nothing.

@@ -1,0 +1,32 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Env / secrets
+.env
+.env.*
+
+# Generated data (regenerated on every run; don't commit)
+data/output/*
+!data/output/.gitkeep
+
+# HuggingFace / sentence-transformers model cache (downloaded at runtime)
+.cache/
+**/models--*/
+
+# OS / editor cruft
+.DS_Store
+.idea/
+.vscode/
+*.log
