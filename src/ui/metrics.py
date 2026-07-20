@@ -33,7 +33,7 @@ def render_metrics(results, processing_time: float):
     first_run = f"{processing_time:.2f}s" if not is_cached else "N/A"
     cached_time = f"{processing_time:.2f}s" if is_cached else "N/A"
     
-    html = f"""
+    card_html = f"""
     <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
         <div class="stCard" style="flex: 1; text-align: center;">
             <div data-testid="stMetricValue" style="font-size: 2.5rem;">👥 {total_candidates}</div>
@@ -58,7 +58,7 @@ def render_metrics(results, processing_time: float):
         </div>
     </div>
     """
-    st.markdown(html.replace('\n', ''), unsafe_allow_html=True)
+    st.markdown(card_html.replace('\n', ''), unsafe_allow_html=True)
 
 def render_top_candidate_spotlight(results, candidate_dict):
     """
@@ -93,7 +93,7 @@ def render_top_candidate_spotlight(results, candidate_dict):
     
     st.markdown("### 🏆 Top Recommended Candidate")
     
-    html = f"""
+    card_html = f"""
     <div class="stCard" style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); border: 1px solid rgba(59, 130, 246, 0.5); margin-bottom: 2rem;">
         <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem; margin-bottom: 1rem;">
             <div>
@@ -132,5 +132,5 @@ def render_top_candidate_spotlight(results, candidate_dict):
         </div>
     </div>
     """
-    html_minified = html.replace('\n', '')
+    html_minified = card_html.replace('\n', '')
     st.markdown(html_minified, unsafe_allow_html=True)
